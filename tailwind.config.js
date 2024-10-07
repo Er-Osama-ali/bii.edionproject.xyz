@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "#d3c9c1",
         secondary: "#e8e3df",
+        hover:"#ece8e5",
         ali:"#eeebe8"
 
 
