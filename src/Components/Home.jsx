@@ -1,3 +1,4 @@
+
 import { ImArrowUp } from "react-icons/im";
 import React, { useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -28,9 +29,8 @@ const Home = () => {
             <div
               key={index}
               className="border p-2 flex items-center justify-center text-center bg-secondary cursor-pointer shadow-xl hover:bg-hover transform hover:scale-110 transition-all duration-300 ease-in-out"
-              style={{ height: '5vw' }} // Use viewport width for height, making it responsive
-            >
-              {/* Box content */}
+              style={{ height: '5vw' }} >
+             
             </div>
           ))}
         </div>
