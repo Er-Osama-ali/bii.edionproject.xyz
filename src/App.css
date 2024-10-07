@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .BoxFix {
+      height: 50px; /* Height for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .BoxFix {
+      height: 40px; /* Height for mobile */
+    }}

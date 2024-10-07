@@ -7,7 +7,7 @@ import Register from './Components/Register';
 import Terms from './Components/Terms'
 import Sidebar from './Pages/Sidebar';
 import Logout from './Pages/Logout';
-
+import './App.css'
 
 
 function App() {
