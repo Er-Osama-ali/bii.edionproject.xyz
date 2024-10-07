@@ -10,7 +10,8 @@ export default {
         primary: "#d3c9c1",
         secondary: "#e8e3df",
         hover:"#ece8e5",
-        ali:"#eeebe8"
+        nav:"#74716f",
+         ali:"#eeebe8"
 
 
       },

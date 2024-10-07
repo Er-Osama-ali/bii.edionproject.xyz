@@ -19,7 +19,7 @@ const Login = () => {
 
     if (storedUser.email === email && storedUser.password === password) {
       alert('Login successful!');
-      navigate('/'); // Redirect to Home page on successful login
+      navigate('/');
     } else {
       setErrorMessage('Invalid email or password');
     }
@@ -43,7 +43,7 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border rounded-lg"
               placeholder="Enter your email"
             />
           </div>
@@ -58,17 +58,17 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border rounded-lg"
               placeholder="Enter your password"
             />
           </div>
 
-          <button type="submit" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
+          <button type="submit" className="text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
             Login
           </button>
 
           <Link to="/register">
-            <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
+            <button type="button" className="text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
               Register
             </button>
           </Link>

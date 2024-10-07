@@ -43,7 +43,7 @@ const Register = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none"
               placeholder="Enter your name"
             />
           </div>
@@ -55,7 +55,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none"
               placeholder="Enter your email"
             />
           </div>
@@ -67,7 +67,7 @@ const Register = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none "
               placeholder="Enter your phone number"
             />
           </div>
@@ -79,7 +79,7 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none"
               placeholder="Enter your password"
             />
           </div>
@@ -91,7 +91,7 @@ const Register = () => {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-black"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none"
               placeholder="Confirm your password"
             />
           </div>
@@ -112,7 +112,7 @@ const Register = () => {
 
 
           <button
-            className={`text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 w-full ${acceptedTerms ? 'hover:bg-gray-100 dark:hover:bg-gray-700' : 'bg-gray-400 cursor-not-allowed'}`}
+            className={`text-gray-900 bg-white border w-full border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full' : 'bg-gray-400 cursor-not-allowed'}`}
             disabled={!acceptedTerms}
           >
             Register
@@ -120,8 +120,7 @@ const Register = () => {
 
 
           <Link to="/login">
-            <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600
-           dark:focus:ring-gray-700 w-full">Login</button>
+            <button type="button" className='"text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full' >Login</button>
           </Link>
         </form>
       </div>

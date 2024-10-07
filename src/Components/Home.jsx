@@ -26,6 +26,7 @@ const Home = () => {
           {items.map((_, index) => (
             <div
               key={index}
+              id="BoxFix"
               className="border p-2 flex items-center justify-center text-center bg-secondary cursor-pointer shadow-xl hover:bg-hover transform hover:scale-110 transition-all duration-300 ease-in-out"
               style={{ height: '60px' }}
             >
