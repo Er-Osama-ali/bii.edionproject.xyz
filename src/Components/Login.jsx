@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -48,31 +50,38 @@ const Login = () => {
             />
           </div>
           
-          <div className="mb-4">
+          <div className="mb-4 relative"> {/* Container for the password input */}
             <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="password">
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border rounded-lg"
+              className="w-full px-3 py-2 border rounded-lg pr-10" // Padding-right for the icon
               placeholder="Enter your password"
             />
+            <button 
+              type="button" 
+              onClick={() => setShowPassword(!showPassword)} 
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center"> {/* Center the icon vertically */}
+              {showPassword ? <FiEyeOff /> : <FiEye />} {/* Eye icon */}
+            </button>
           </div>
 
           <button type="submit" className="text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
             Login
           </button>
-
-          <Link to="/register">
-            <button type="button" className="text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-full">
-              Register
-            </button>
-          </Link>
         </form>
+
+        <p className="text-center text-sm text-gray-600 mt-4">
+          Don't have an account?{' '}
+          <Link to="/register" className="text-blue-500 hover:underline">
+            Register here
+          </Link>
+        </p>
       </div>
     </div>
   );

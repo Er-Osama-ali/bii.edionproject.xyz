@@ -5,9 +5,8 @@ import Navbar from './Components/Navbar';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Terms from './Components/Terms'
-import Sidebar from './Pages/Sidebar';
-import Logout from './Pages/Logout';
-import './App.css'
+import Advertisement from './Pages/Advertisement';
+
 
 
 function App() {
@@ -28,8 +27,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/sidebar" element={<Sidebar />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/advertisement" element={<Advertisement />} />
+         
 
         </Routes>
 
